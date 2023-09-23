@@ -33,7 +33,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip 
-        pip install pytest-pep8
+        python -m pip install flake8
         pip install -r ./backend/requirements.txt 
     - name: Test with pytest and django tests
       # Добавляем env-переменные для доступа к БД
@@ -46,7 +46,7 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
       run: |
-        python -m pytest-pep8 backend/
+        python -m flake8 backend/
         cd backend/
         python manage.py test
 
@@ -145,7 +145,7 @@ jobs:
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
-          context: ./gateway/
+          context: ./nginx/
           push: true
           tags: peterwi/kittygram_gateway:latest
   deploy:
