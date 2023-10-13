@@ -148,5 +148,8 @@ dmypy.json
 # папки со статикой и медиа
 media/
 
+# Docker files
+docker-compose.yml
+
 # Others
 node_modules

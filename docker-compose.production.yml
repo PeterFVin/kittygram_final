@@ -17,6 +17,8 @@ services:
     volumes:
       - static_volume:/backend_static
       - media:/media
+    depends_on:
+      - db
   frontend:
     image: peterwi/kittygram_frontend
     env_file: .env
@@ -29,5 +31,8 @@ services:
     volumes:
       - static_volume:/static/
       - media:/media
+    depends_on:
+      - backend
+      - frontend
     ports:
       - 8000:80

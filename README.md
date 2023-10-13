@@ -1,4 +1,6 @@
-# Проект «taski-docker» V1.0
+# Проект «Kittygram» V1.0
+
+![Workflow Kittygram](https://github.com/PeterFVin/kittygram_final/actions/workflows/main.yml/badge.svg)
 
 ## О проекте
 
