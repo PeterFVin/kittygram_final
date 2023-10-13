@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-if os.getenv('PRODUCTION') == True:
+if os.getenv('PRODUCTION'):
     DEBUG = False
 else:
     DEBUG = True
@@ -58,7 +58,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
 
-if os.getenv('SQLITE') == True:
+if os.getenv('SQLITE'):
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
