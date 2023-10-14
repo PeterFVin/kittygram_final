@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install python_dotenv --user
-
 RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
