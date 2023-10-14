@@ -13,7 +13,7 @@ if os.getenv('PRODUCTION'):
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('SECRET_KEY').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
