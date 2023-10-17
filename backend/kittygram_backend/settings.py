@@ -8,10 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-if os.getenv('PRODUCTION'):
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = os.getenv('PRODUCTION')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 

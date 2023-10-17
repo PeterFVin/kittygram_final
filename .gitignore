@@ -149,7 +149,7 @@ dmypy.json
 media/
 
 # Docker files
-docker-compose.yml
+/docker-compose.yml
 
 # Others
 node_modules
