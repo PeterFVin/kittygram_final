@@ -11,6 +11,7 @@ services:
     env_file: .env
     volumes:
       - pg_data_production:/var/lib/postgresql/data
+      - media:/media
   backend:
     image: peterwi/kittygram_backend
     env_file: .env
